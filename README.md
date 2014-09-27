@@ -1,4 +1,4 @@
-command-builder [![Build Status](https://travis-ci.org/yangshuan/command-builder.svg?branch=develop)](https://travis-ci.org/yangshuan/command-builder)
+command-builder <div align="right">[![Build Status](https://travis-ci.org/yangshuan/command-builder.svg?branch=develop)](https://travis-ci.org/yangshuan/command-builder)</div>
 ===============
 
 This is a Java library to help you to build your command arguments.
