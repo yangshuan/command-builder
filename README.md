@@ -5,7 +5,7 @@ This is a Java library to help you to build your command arguments.
 
 ## Usage
 
-``java
+``` java
 public static void main(String[] args) {
   String[] args = { "-key1", "val1", "-key2", "10", "-key3", "5.5" };
 	CommandBuilder builder = CommandBuilder.getInstance(false);
@@ -17,7 +17,7 @@ public static void main(String[] args) {
 	assertEquals(new Integer(10), (Integer) arguments.get("key2"));
 	assertEquals(new Double(5.5), (Double) arguments.get("key3"));
 }
-``
+```
 
 
 ## LICENSE
