@@ -1,4 +1,4 @@
-package com.commander.builder;
+package dart.shuayang.tools.command;
 
 import static org.junit.Assert.*;
 
@@ -125,8 +125,8 @@ public class CommandBuilderTest {
 		builder.addArgument("key2", Integer.class);
 		builder.addArgument(Double.class);
 		StringBuilder sb = new StringBuilder("Usage: \n");
-		sb.append("\t-key1 : java.lang.String\tit is key1\n");
-		sb.append("\t-key2 : java.lang.Integer\t\n");
+		sb.append("\t-key1	java.lang.String\tit is key1\n");
+		sb.append("\t-key2	java.lang.Integer\t\n");
 		sb.append("\tjava.lang.Double\t\n");
 		assertEquals(sb.toString(), builder.usage());
 	}

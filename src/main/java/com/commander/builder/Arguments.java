@@ -1,4 +1,4 @@
-package com.commander.builder;
+package dart.shuayang.tools.command;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -41,6 +41,10 @@ public class Arguments {
 	 */
 	public Iterator<Object> singleIterator() {
 		return Collections.unmodifiableList(_singleValues).iterator();
+	}
+
+	public boolean isEmpty() {
+		return this._values.isEmpty() && this._singleValues.isEmpty();
 	}
 
 }

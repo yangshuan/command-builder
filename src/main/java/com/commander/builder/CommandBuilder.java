@@ -9,7 +9,7 @@
  * 	java.lang.Double,
  * 	java.lang.String
  */
-package com.commander.builder;
+package dart.shuayang.tools.command;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -79,7 +79,7 @@ public class CommandBuilder {
 		if (!runned) {
 			synchronized (lock) {
 				if (!runned) {
-					if (type != String.class && type != Short.class && type != Integer.class && type != Long.class && type != Float.class && type != Double.class) {
+					if (type != Boolean.class && type != String.class && type != Short.class && type != Integer.class && type != Long.class && type != Float.class && type != Double.class) {
 						throw new UnsupportedTypeException(type);
 					}
 
@@ -122,7 +122,7 @@ public class CommandBuilder {
 	public String toString() {
 		StringBuilder builder = new StringBuilder("Usage: \n");
 		for (String name : _names.keySet()) {
-			builder.append("\t-").append(name).append(" : ");
+			builder.append("\t-").append(name).append("\t");
 			builder.append(_names.get(name).getName());
 			builder.append("\t").append(_descs.get(name));
 			builder.append("\n");
@@ -190,6 +190,8 @@ public class CommandBuilder {
 				return Double.parseDouble(value);
 			} else if (type == String.class) {
 				return value;
+			} else if (type == Boolean.class) {
+				return Boolean.TRUE;
 			} else {
 				throw new UnsupportedOperationException(type.getName());
 			}
